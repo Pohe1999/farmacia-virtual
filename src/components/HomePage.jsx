@@ -73,7 +73,7 @@ const RegistrationForm = ({ onClose, selectedProduct, onFolioGenerated }) => {
           <span className="text-2xl text-[#821e30] border-b-2 border-[#821e30]">{selectedProduct.name}</span>
         </h2>
         <p className="text-center text-md mb-6 text-gray-600 bg-slate-800 rounded-md text-slate-100 p-4 text-justify">
-          Verifica tus datos antes de enviar. Es importante que completes todos los campos correctamente para que podamos contactarte y agendar la fecha de entrega. Además, recuerda que el beneficiario deberá presentar una <span className="font-bold">identificación oficial</span> al momento de recibir la entrega. ¡Gracias por tu cooperación!
+          Verifica tus datos antes de enviar. Es importante que completes todos los campos correctamente para que podamos contactarte y agendar la fecha de entrega. Además, recuerda que el beneficiario deberá presentar una <span className="font-semibold">identificación oficial</span> al momento de recibir la entrega. ¡Gracias por tu cooperación!
         </p>
 
         {folio && (
