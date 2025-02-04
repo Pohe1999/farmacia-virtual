@@ -1,3 +1,6 @@
+// Cargar las variables de entorno desde el archivo .env
+require('dotenv').config();
+
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -13,14 +16,14 @@ app.use(cors());
 // Usar bodyParser para manejar las solicitudes con JSON
 app.use(bodyParser.json());
 
-// Conexión a MongoDB
+// Conexión a MongoDB Atlas utilizando la variable de entorno
 mongoose
-  .connect("mongodb://localhost:27017/farmacia-mg", {
+  .connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
-  .then(() => console.log("Conectado a MongoDB"))
-  .catch((err) => console.error("Error al conectar a MongoDB", err));
+  .then(() => console.log("Conectado a MongoDB Atlas"))
+  .catch((err) => console.error("Error al conectar a MongoDB Atlas", err));
 
 // Definir el modelo de Producto
 const Producto = mongoose.model(
