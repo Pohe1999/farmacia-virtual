@@ -221,7 +221,7 @@ const HomePage = () => {
   useEffect(() => {
     const loadProducts = async () => {
       try {
-        const response = await fetch("http://localhost:5002/api/productos");
+        const response = await fetch("https://farmacia-virtual.onrender.com/api/productos");
         if (!response.ok) {
           throw new Error("No se pudieron cargar los productos.");
         }
