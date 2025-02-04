@@ -10,7 +10,7 @@ const Login = ({ onLogin }) => {
   const handleLogin = async () => {
     try {
       // Realizar la solicitud al servidor para validar las credenciales
-      const response = await axios.post("http://localhost:5002/api/login", {
+      const response = await axios.post("https://farmacia-virtual.onrender.com/api/login", {
         email,
         password,
       });

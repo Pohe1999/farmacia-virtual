@@ -16,7 +16,7 @@ const RegistrationForm = ({ onClose, selectedProduct, onFolioGenerated }) => {
 
   const onSubmit = async (data) => {
     try {
-      const response = await fetch("http://localhost:5002/api/registro", {
+      const response = await fetch("https://farmacia-virtual.onrender.com/api/registro", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -40,7 +40,7 @@ const RegistrationForm = ({ onClose, selectedProduct, onFolioGenerated }) => {
 
       // Actualizar stock
       const updateStockResponse = await fetch(
-        `http://localhost:5002/api/productos/${selectedProduct._id}/decrementar`,
+        `https://farmacia-virtual.onrender.com/api/productos/${selectedProduct._id}/decrementar`,
         {
           method: "PATCH",
           headers: {
