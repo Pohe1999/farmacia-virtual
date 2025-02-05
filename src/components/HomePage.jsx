@@ -269,14 +269,15 @@ const HomePage = () => {
       </div>
 
       {/* Banner Principal */}
-      <div className="relative bg-cover bg-center h-[420px] sm:h-[620px]" style={{ backgroundImage: 'url("/senadora-logo.jpg")' }}>
-        <div className="absolute inset-0 bg-black bg-opacity-10 flex justify-center items-center text-center text-white px-4 md:px-0">
-          <div className="text-[#4A4A4A]" style={{ backgroundImage: 'url("/senadora-logo.jpg")' }}></div>
+      <div className="relative bg-cover bg-center pt-[300px]" style={{ backgroundImage: 'url("/senadora-logo.jpg")' }}>
+        <div className="absolute inset-0 bg-slate-900 bg-opacity-10">
+          
         </div>
       </div>
 
+
       {/* Buscador */}
-      <div className="p-6 mt-3">
+      <div className="p-3 mt-1">
         <input
           type="text"
           value={searchTerm}
@@ -287,7 +288,7 @@ const HomePage = () => {
       </div>
 
       {/* Productos */}
-      <div className="p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-1">
+      <div className="p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredProducts.map((product) => (
           <div
             key={product._id}
