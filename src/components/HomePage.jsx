@@ -104,6 +104,7 @@ const RegistrationForm = ({ onClose, selectedProduct, onFolioGenerated }) => {
               className="w-full max-w-md border-2 border-slate-400 rounded p-3"
               placeholder="Ingresa tu apellido paterno"
             />
+            {errors.apellidoPaterno && <p className="text-red-600 text-sm">{errors.apellidoPaterno.message}</p>}
           </div>
 
           {/* Apellido Materno */}
@@ -114,6 +115,7 @@ const RegistrationForm = ({ onClose, selectedProduct, onFolioGenerated }) => {
               className="w-full max-w-md border-2 border-slate-400 rounded p-3"
               placeholder="Ingresa tu apellido materno"
             />
+            {errors.apellidoMaterno && <p className="text-red-600 text-sm">{errors.apellidoMaterno.message}</p>}
           </div>
 
           {/* Fecha de Nacimiento */}
@@ -125,6 +127,7 @@ const RegistrationForm = ({ onClose, selectedProduct, onFolioGenerated }) => {
               {...register("fechaNacimiento",  { required: "Este campo es obligatorio" })}
               className="w-full max-w-md border-2 border-slate-400 rounded p-3"
             />
+            {errors.fechaNacimiento && <p className="text-red-600 text-sm">{errors.fechaNacimiento.message}</p>}
           </div>
 
           <div className="mb-4">
@@ -151,6 +154,7 @@ const RegistrationForm = ({ onClose, selectedProduct, onFolioGenerated }) => {
               className="w-full max-w-md border-2 border-slate-400 rounded p-5"
               placeholder="Describe tu padecimiento"
             />
+            {errors.descripcionPadecimiento && <p className="text-red-600 text-sm">{errors.descripcionPadecimiento.message}</p>}
           </div>
 
           {/* Celular */}
