@@ -46,7 +46,7 @@ const QrGenerador = ({ folio }) => {
     // Texto de introducción
     pdf.setFontSize(12);
     pdf.text(
-      "Este es tu código QR. Deberás presentarlo el día de la entrega para recibir tu medicamento junto con una identificación oficial. Este ticket puedes presentarlo digital o impreso.",
+      `Este es tu código QR con el folio: ${folio}. Deberás presentarlo el día de la entrega para recibir tu medicamento junto con una identificación oficial. Este ticket puedes presentarlo digital o impreso.`,
       20,
       50,
       { maxWidth: 170, align: "justify" }
@@ -86,8 +86,9 @@ const QrGenerador = ({ folio }) => {
 
   return (
     <div className="p-5">
-      <h1 className="text-2xl font-bold mb-4 text-center">Este es tu codigo QR que debes presentar para la entrega de tu medicamento.</h1>
-
+      <h1 className="text-lg font-semibold mb-4 text-center">Este es tu codigo QR que debes presentar para la entrega de tu medicamento.</h1>
+      <p className="text-center italic text-sm">Tu folio es: <span className="font-bold">{folio}</span></p>
+      <p className="text-center italic text-sm border-b border-black">Recuerda que debes llevar una identificación oficial</p>
       {folio && (
         <div className="mt-4 justify-center flex">
           <img src={qrCodeDataUrl} alt="Código QR generado" />

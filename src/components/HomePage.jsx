@@ -66,7 +66,7 @@ const RegistrationForm = ({ onClose, selectedProduct, onFolioGenerated }) => {
   };
 
   return (
-    <div className="fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center z-50">
+    <div className="fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center z-50 p-">
       <div className="bg-white p-6 max-w-lg w-full border rounded-lg shadow-xl overflow-auto max-h-[90vh]">
         <h2 className="text-2xl font-bold mb-4 text-center">
           Formulario de registro de: <br />
@@ -269,11 +269,14 @@ const HomePage = () => {
       </div>
 
       {/* Banner Principal */}
-      <div className="relative bg-cover bg-center pt-[300px]" style={{ backgroundImage: 'url("/senadora-logo.jpg")' }}>
-        <div className="absolute inset-0 bg-slate-900 bg-opacity-10">
-          
-        </div>
+      <div
+        className="relative bg-cover bg-center sm:pt-[600px] pt-[300px] sm:bg-[length:90%_120%] bg-no-repeat md:bg-[length:90%_170%]"
+        style={{ backgroundImage: 'url("/senadora-logo.jpg")' }}
+      >
+        <div className="absolute inset-0 bg-slate-900 bg-opacity-10"></div>
       </div>
+
+
 
 
       {/* Buscador */}
@@ -330,7 +333,7 @@ const HomePage = () => {
       {/* Modal con QR */}
       {showQrModal && (
         <div className="fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center z-50">
-          <div className="bg-white p-6 max-w-lg w-full border rounded-lg shadow-xl overflow-auto max-h-[90vh]">
+          <div className="m-9 bg-cover bg-center bg-no-repeat rounded-md" style={{ backgroundImage: 'url("/FONDO-MORENA-2.jpg")' }}>
             <h2 className="text-2xl font-bold mb-4 text-center bg-red-800 text-slate-100 p-2 rounded-sm">
               ¡Registro existoso!
             </h2>
