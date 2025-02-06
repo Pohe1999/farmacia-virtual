@@ -98,7 +98,7 @@ const RegistrationForm = ({ onClose, selectedProduct, onFolioGenerated }) => {
           <div className="mb-4">
             <label className="block text-gray-700 font-semibold text-xl mb-2">Apellido Paterno:</label>
             <input
-              {...register("apellidoPaterno")}
+              {...register("apellidoPaterno",  { required: "Este campo es obligatorio" })}
               className="w-full max-w-md border-2 border-slate-400 rounded p-3"
               placeholder="Ingresa tu apellido paterno"
             />
@@ -108,7 +108,7 @@ const RegistrationForm = ({ onClose, selectedProduct, onFolioGenerated }) => {
           <div className="mb-4">
             <label className="block text-gray-700 font-semibold text-xl mb-2">Apellido Materno:</label>
             <input
-              {...register("apellidoMaterno")}
+              {...register("apellidoMaterno", { required: "Este campo es obligatorio" })}
               className="w-full max-w-md border-2 border-slate-400 rounded p-3"
               placeholder="Ingresa tu apellido materno"
             />
@@ -120,7 +120,7 @@ const RegistrationForm = ({ onClose, selectedProduct, onFolioGenerated }) => {
             <p className="text-slate-600">El beneficiario debe ser mayor de edad</p>
             <input
               type="date"
-              {...register("fechaNacimiento")}
+              {...register("fechaNacimiento",  { required: "Este campo es obligatorio" })}
               className="w-full max-w-md border-2 border-slate-400 rounded p-3"
             />
           </div>
@@ -128,7 +128,7 @@ const RegistrationForm = ({ onClose, selectedProduct, onFolioGenerated }) => {
           <div className="mb-4">
             <label className="block text-gray-700 font-semibold text-xl mb-2">Municipio donde habita:</label>
             <select
-              {...register("municipio")} // Asegúrate de que el hook de react-hook-form esté configurado correctamente
+              {...register("municipio",  { required: "Este campo es obligatorio" })} // Asegúrate de que el hook de react-hook-form esté configurado correctamente
               className="w-full max-w-md border rounded p-3"
             >
               <option value="">Selecciona un municipio</option>
@@ -145,7 +145,7 @@ const RegistrationForm = ({ onClose, selectedProduct, onFolioGenerated }) => {
           <div className="mb-4">
             <label className="block text-gray-700 font-semibold text-xl mb-2">Descripción del Padecimiento:</label>
             <textarea
-              {...register("descripcionPadecimiento")}
+              {...register("descripcionPadecimiento",  { required: "Este campo es obligatorio" })}
               className="w-full max-w-md border-2 border-slate-400 rounded p-5"
               placeholder="Describe tu padecimiento"
             />
@@ -160,7 +160,7 @@ const RegistrationForm = ({ onClose, selectedProduct, onFolioGenerated }) => {
                 pattern: {
                   value: /^[0-9]{10}$/,
                   message: "Debe ser un número de 10 dígitos",
-                },
+                },required: "Este campo es obligatorio" 
               })}
               className="w-full max-w-md border-2 border-slate-400 rounded p-3"
               placeholder="Ingresa tu celular"
@@ -179,7 +179,7 @@ const RegistrationForm = ({ onClose, selectedProduct, onFolioGenerated }) => {
                 pattern: {
                   value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
                   message: "Debe ser un correo válido"
-                },
+                },required: "Este campo es obligatorio" 
               })}
             />
             {errors.correo && <p className="text-red-600 text-sm mt-1">{errors.correo.message}</p>}
