@@ -67,7 +67,7 @@ const RegistrationForm = ({ onClose, selectedProduct, onFolioGenerated }) => {
 
   return (
     <div className="fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center z-50 p-">
-      <div className="bg-white p-6 max-w-lg w-full border rounded-lg shadow-xl overflow-auto max-h-[90vh]">
+      <div className="bg-white p-11 max-w-lg w-full border rounded-lg shadow-xl overflow-auto max-h-[90vh]">
         <h2 className="text-2xl font-bold mb-4 text-center">
           Formulario de registro de: <br />
           <span className="text-2xl text-[#821e30] border-b-2 border-[#821e30]">{selectedProduct.name}</span>
