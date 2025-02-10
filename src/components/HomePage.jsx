@@ -38,7 +38,7 @@ const RegistrationForm = ({ onClose, selectedProduct, onFolioGenerated }) => {
       setFolio(result.folio); // Asignamos el folio recibido del backend
       reset();
 
-      // Actualizar stock
+      {/*// Actualizar stock
       const updateStockResponse = await fetch(
         `https://farmacia-virtual.onrender.com/api/productos/${selectedProduct._id}/decrementar`,
         {
@@ -54,7 +54,7 @@ const RegistrationForm = ({ onClose, selectedProduct, onFolioGenerated }) => {
       }
 
       const updateResult = await updateStockResponse.json();
-      alert(updateResult.message);
+    alert(updateResult.message);  */}
 
       // Llamamos a la función onFolioGenerated con el folio generado
       onFolioGenerated(result.folio);
